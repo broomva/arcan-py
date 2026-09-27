@@ -3,9 +3,13 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
+# Version updates disabled (open-pull-requests-limit: 0): repo is dormant.
+# Dependabot security updates are unaffected; they use a separate internal limit.
+# BRO-2600
 version: 2
 updates:
   - package-ecosystem: 'pip' # See documentation for possible values
+    open-pull-requests-limit: 0
     directory: '/' # Location of package manifests
     schedule:
       interval: 'weekly'
